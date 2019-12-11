@@ -10,11 +10,6 @@ import tornado.ioloop
 from application import Application
 
 
-class IndexHandler(tornado.web.RequestHandler):
-    def get(self, *args, **kwargs):
-        return self.write("hello")
-
-
 if __name__ == '__main__':
     app = Application()
     http_server = tornado.httpserver.HTTPServer(app)
